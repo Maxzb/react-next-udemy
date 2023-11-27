@@ -1,4 +1,4 @@
-import { Button, Htag } from './components';
+import { Button, Htag, Paragraph } from './components';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -11,6 +11,7 @@ export default function Home() {
       <Button appereance="ghost" arrow="down">
         Кнопка
       </Button>
+      <Paragraph size="small">Текст</Paragraph>
     </main>
   );
 }
