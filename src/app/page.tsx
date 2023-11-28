@@ -1,11 +1,23 @@
+'use client';
 import { Button, Htag, Paragraph, Tag } from './components';
 import styles from './page.module.css';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [counter, setCounter] = useState<number>(0);
+
+  useEffect(() => {
+    console.log('counter', counter);
+  }, [counter]);
+
   return (
     <main className={styles.main}>
-      <Htag tag="h1">Текст</Htag>
-      <Button appereance="primary" arrow="right">
+      <Htag tag="h1">{counter}</Htag>
+      <Button
+        appereance="primary"
+        arrow="right"
+        onClick={() => setCounter(counter + 1)}
+      >
         Кнопка
       </Button>
       <Button appereance="ghost" arrow="down">
@@ -21,8 +33,6 @@ export default function Home() {
       <Tag size="small" color="green">
         green
       </Tag>
-      {/* <Tag></Tag> */}
-      {/* <Tag></Tag> */}
     </main>
   );
 }
