@@ -1,4 +1,4 @@
-import { Button, Htag, Paragraph } from './components';
+import { Button, Htag, Paragraph, Tag } from './components';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -12,6 +12,17 @@ export default function Home() {
         Кнопка
       </Button>
       <Paragraph size="small">Текст</Paragraph>
+      <Tag size="small" color="primary">
+        primary
+      </Tag>
+      <Tag size="middle" color="red">
+        red
+      </Tag>
+      <Tag size="small" color="green">
+        green
+      </Tag>
+      {/* <Tag></Tag> */}
+      {/* <Tag></Tag> */}
     </main>
   );
 }
