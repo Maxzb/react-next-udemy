@@ -1,5 +1,5 @@
 'use client';
-import { Button, Htag, Paragraph, Tag } from './components';
+import { Button, Htag, Paragraph, Rating, Tag } from './components';
 import styles from './page.module.css';
 import { useEffect, useState } from 'react';
 
@@ -33,6 +33,7 @@ export default function Home() {
       <Tag size="small" color="green">
         green
       </Tag>
+      <Rating rating={5}></Rating>
     </main>
   );
 }
