@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 
 export default function Home() {
   const [counter, setCounter] = useState<number>(0);
+  const [rating, setRating] = useState<number>(4);
 
   useEffect(() => {
     console.log('counter', counter);
@@ -33,7 +34,7 @@ export default function Home() {
       <Tag size="small" color="green">
         green
       </Tag>
-      <Rating rating={5}></Rating>
+      <Rating rating={rating} isEditable setRating={setRating}></Rating>
     </main>
   );
 }
