@@ -1,9 +1,10 @@
 'use client';
 import { Button, Htag, Paragraph, Rating, Tag } from './components';
+import { withLayout } from './layout/Layout';
 import styles from './page.module.css';
 import { useEffect, useState } from 'react';
 
-export default function Home() {
+function Home() {
   const [counter, setCounter] = useState<number>(0);
   const [rating, setRating] = useState<number>(4);
 
@@ -12,7 +13,7 @@ export default function Home() {
   }, [counter]);
 
   return (
-    <main className={styles.main}>
+    <>
       <Htag tag="h1">{counter}</Htag>
       <Button
         appereance="primary"
@@ -35,6 +36,8 @@ export default function Home() {
         green
       </Tag>
       <Rating rating={rating} isEditable setRating={setRating}></Rating>
-    </main>
+    </>
   );
 }
+
+export default withLayout(Home);

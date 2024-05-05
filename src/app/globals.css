@@ -7,7 +7,7 @@
 body {
   color: var(--black);
   background-color: #f5f6f8;
-  padding: 0 15px;
+  /* padding: 0 15px; */
   font-weight: 400;
 }
 
